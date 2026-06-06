@@ -16,3 +16,15 @@
 .fixedNavVisible {
   transform: translateY(0);
 }
+
+/* ── Compact mode: tighter padding for the scrolled navbar ── */
+/* Override the navbarLight padding that's set in Navbar.module.css */
+.fixedNav :global(.navbarLight),
+.fixedNav nav {
+  padding: 12px 0 !important;
+}
+
+/* Also tighten the navContainer bottom spacing */
+.fixedNav :global(.navContainer) {
+  padding-bottom: 8px !important;
+}

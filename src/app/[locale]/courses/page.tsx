@@ -4,6 +4,7 @@ import { Link } from '@/i18n/routing';
 import Navbar from '@/components/Navbar';
 import CoursesScrollNav from '@/components/CoursesScrollNav';
 import CourseListClient from './CourseListClient';
+import CourseExtras from './CourseExtras';
 import styles from './Courses.module.css';
 
 export default async function CoursesPage() {
@@ -20,7 +21,7 @@ export default async function CoursesPage() {
 
       {/* ── Fixed navbar that slides down (curtain) when user scrolls past the header ── */}
       <CoursesScrollNav threshold={160}>
-        <Navbar theme="light" />
+        <Navbar theme="light" compact />
       </CoursesScrollNav>
 
       {/* ── Blue "All Courses" Banner ── */}
@@ -37,6 +38,9 @@ export default async function CoursesPage() {
 
       {/* ── Course List & Filters ── */}
       <CourseListClient initialCourses={courses} />
+
+      {/* ── Schools & Partners + Widgets ── */}
+      <CourseExtras />
     </main>
   );
 }

@@ -1,0 +1,76 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f7f9fc;
+}
+
+/* Static white navbar at the very top */
+.navbarSection {
+  background-color: var(--white);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Coloured page banner */
+.banner {
+  width: 100%;
+  padding: 0 0 55px;
+}
+
+.bannerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 10px;
+}
+
+.bannerTitle {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumbItem {
+  background-color: var(--white);
+  color: #777;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.breadcrumbItem:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.breadcrumbSep {
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .bannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .bannerTitle {
+    font-size: 2.2rem;
+  }
+}

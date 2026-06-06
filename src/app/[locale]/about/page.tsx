@@ -1,15 +1,21 @@
-import Navbar from '@/components/Navbar';
+import { getTranslations } from 'next-intl/server';
+import PageLayout from '@/components/PageLayout';
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations('Navigation');
+
   return (
-    <main>
-      <div style={{ backgroundColor: 'var(--primary)' }}>
-        <Navbar />
-      </div>
-      <div className="container" style={{ padding: '100px 20px', minHeight: '60vh' }}>
-        <h1>About Us</h1>
+    <PageLayout
+      title="About Us"
+      breadcrumbs={[
+        { label: t('home'), href: '/' },
+        { label: t('about') },
+      ]}
+    >
+      <div className="container" style={{ padding: '80px 20px', minHeight: '60vh' }}>
+        <h2>About Enova</h2>
         <p>Information about Enova.</p>
       </div>
-    </main>
+    </PageLayout>
   );
 }

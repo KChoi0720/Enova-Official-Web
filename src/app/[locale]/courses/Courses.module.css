@@ -98,8 +98,8 @@
 /* ── Course Grid ── */
 .courseGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px 60px;
   padding-bottom: 80px;
 }
 
@@ -130,43 +130,43 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 12px 14px;
   color: var(--white);
 }
 
 .cardTitle {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: 0;
   line-height: 1.3;
 }
 
 .cardBody {
-  padding: 20px;
+  padding: 10px 12px 12px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .cardCategory {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 4px;
 }
 
 .cardFooter {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-top: auto;
+  align-items: center;
+  margin-top: 2px;
 }
 
 .cardRating {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   color: #fbb03b;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
 .ratingStars {
@@ -179,13 +179,13 @@
 }
 
 .cardPrice {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 300;
   color: #333;
 }
 
 .cardPrice span {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #999;
 }
 
@@ -214,4 +214,247 @@
   .headerTitle {
     font-size: 2.5rem;
   }
+  .courseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .courseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Schools & Partners
+   ═══════════════════════════════════════════════════════════ */
+.partnersSection {
+  background-color: var(--white);
+  padding: 80px 0 70px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.partnersTitle {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #333;
+  margin: 0 0 18px;
+  letter-spacing: 0.01em;
+}
+
+.partnersDesc {
+  max-width: 620px;
+  margin: 0 auto 55px;
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.partnersRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.partnerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 68px;
+  border-radius: 6px;
+  border: 1px solid;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.partnerLogo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Widgets Section (Calendar · Recent Posts · Latest Comments)
+   ═══════════════════════════════════════════════════════════ */
+.widgetsSection {
+  background-color: #f7f9fc;
+  padding: 70px 0 90px;
+}
+
+.widgetsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.widget { /* each column */ }
+
+.widgetTitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* ── Calendar ── */
+.calWidget { width: 100%; }
+
+.calHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.calMonthLabel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #666;
+  letter-spacing: 0.06em;
+}
+
+.calNav {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.calNav:hover { background-color: rgba(46,180,142,0.1); }
+
+.calGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calDayName {
+  font-size: 0.67rem;
+  font-weight: 700;
+  color: #aaa;
+  text-align: center;
+  padding: 4px 0 6px;
+}
+
+.calCell {
+  text-align: center;
+  padding: 6px 2px;
+  font-size: 0.82rem;
+  color: #555;
+  border-radius: 4px;
+  min-height: 28px;
+  line-height: 1.6;
+}
+
+.calToday {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.calBlank { color: transparent; }
+
+/* ── Recent Posts ── */
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.postRow {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.postThumb {
+  width: 72px;
+  height: 56px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.postContent { flex: 1; min-width: 0; }
+
+.postTitle {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 6px;
+  line-height: 1.45;
+}
+
+.postMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  font-size: 0.73rem;
+  color: #26a6d1;
+}
+
+/* ── Latest Comments ── */
+.commentList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.commentItem {
+  display: flex;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+.commentDot {
+  color: var(--primary);
+  font-size: 1.2rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.commentLink {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.commentLink:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .widgetsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .widgetsGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .partnersTitle { font-size: 2rem; }
 }

@@ -19,6 +19,15 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
+/* Compact variant — used on the fixed scroll-triggered curtain navbar */
+.navbarCompact {
+  padding: 10px 0 !important;
+}
+
+.navbarCompact .navContainer {
+  padding-bottom: 6px;
+}
+
 .navContainer {
   display: flex;
   justify-content: space-between;

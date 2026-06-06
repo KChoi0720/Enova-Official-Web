@@ -1,15 +1,21 @@
-import Navbar from '@/components/Navbar';
+import { getTranslations } from 'next-intl/server';
+import PageLayout from '@/components/PageLayout';
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const t = await getTranslations('Navigation');
+
   return (
-    <main>
-      <div style={{ backgroundColor: 'var(--primary)' }}>
-        <Navbar />
-      </div>
-      <div className="container" style={{ padding: '100px 20px', minHeight: '60vh' }}>
-        <h1>Blog</h1>
+    <PageLayout
+      title="Blog"
+      breadcrumbs={[
+        { label: t('home'), href: '/' },
+        { label: t('blog') },
+      ]}
+    >
+      <div className="container" style={{ padding: '80px 20px', minHeight: '60vh' }}>
+        <h2>Blog</h2>
         <p>Latest news and articles.</p>
       </div>
-    </main>
+    </PageLayout>
   );
 }

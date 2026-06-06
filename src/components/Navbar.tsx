@@ -5,13 +5,14 @@ import MobileNav from './MobileNav';
 
 interface NavbarProps {
   theme?: 'dark' | 'light';
+  compact?: boolean;
 }
 
-export default async function Navbar({ theme = 'dark' }: NavbarProps) {
+export default async function Navbar({ theme = 'dark', compact = false }: NavbarProps) {
   const t = await getTranslations('Navigation');
 
   return (
-    <nav className={`${styles.navbar} ${theme === 'light' ? styles.navbarLight : ''}`}>
+    <nav className={`${styles.navbar} ${theme === 'light' ? styles.navbarLight : ''} ${compact ? styles.navbarCompact : ''}`}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logo}>
           Enova.

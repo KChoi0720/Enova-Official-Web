@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import styles from './Home.module.css';
 import Navbar from '@/components/Navbar';
+import CoursesScrollNav from '@/components/CoursesScrollNav';
 import { Monitor, Rocket, Globe, Timer, Star, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getCourses } from '@/services/courseService';
 
@@ -17,7 +18,14 @@ export default async function Home({
 
   return (
     <main className={styles.main}>
+      {/* Dark navbar overlaying the hero */}
       <Navbar />
+
+      {/* Curtain navbar: slides down as compact light bar after scrolling past the hero */}
+      <CoursesScrollNav threshold={200}>
+        <Navbar theme="light" compact />
+      </CoursesScrollNav>
+
       {/* Auto-Playing Hero Slider */}
       <HeroSlider />
 
