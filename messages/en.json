@@ -1,0 +1,66 @@
+{
+  "Navigation": {
+    "home": "HOMEPAGE",
+    "about": "ABOUT US",
+    "courses": "COURSES",
+    "team": "TEAM",
+    "blog": "BLOG",
+    "contact": "CONTACT US",
+    "admin": "Admin"
+  },
+  "Hero": {
+    "slide1Title": "Education Center and distance education",
+    "slide1Subtitle": "Online Education leads the world in distance education with high quality online degrees and online courses.",
+    "slide2Title": "Receive personalized coaching",
+    "slide2Subtitle": "Learning is a collaborative process, and we're here to provide you with guidance every step of the way.",
+    "slide3Title": "Achieve your career goals",
+    "slide3Subtitle": "Gain the skills you need to advance your career and succeed in the modern professional world.",
+    "cta": "Start Learning Now"
+  },
+  "Features": {
+    "feature1": "Take computer science courses with personalized support",
+    "feature2": "Build cool projects to showcase your skills",
+    "feature3": "Earn certificates recognized by Industry"
+  },
+  "Courses": {
+    "title": "Courses Starting Soon",
+    "priceMonthly": "/ monthly",
+    "free": "Free!",
+    "learnMore": "LEARN MORE",
+    "buyNow": "BUY NOW"
+  },
+  "Partners": {
+    "title": "Learn From the Best",
+    "subtitle": "Our online courses are built in partnership with technology leaders and are relevant to industry needs. Upon completing a Online course, you'll receive a verified completion certificate recognized by industry leaders."
+  },
+  "VideoTraining": {
+    "title": "Our Video Training for Microsoft products and technologies",
+    "subtitle": "Mauris vitae quam ligula. In tincidunt sapien sed nibh scelerisque congue. Maecenas ut libero eu metus tincidunt lobortis. Duis accumsan at mauris vel lacinia.",
+    "browseCourses": "BROWSE COURSES"
+  },
+  "Pricing": {
+    "title": "Plans & Pricing",
+    "trial": "Trial",
+    "trialPrice": "Free! 30 Days",
+    "monthly": "Monthly",
+    "monthlyPrice": "$89",
+    "monthlyDesc": "Save $98 every year compared to the monthly plan by paying yearly.",
+    "yearly": "Yearly",
+    "yearlyPrice": "$129",
+    "yearlyDesc": "Save $120 every year compared to the monthly plan by paying biannually.",
+    "button": "I WANT THIS PLAN"
+  },
+  "Info": {
+    "calendar": "Calendar",
+    "popular": "Popular Courses",
+    "recent": "Recent Courses"
+  },
+  "Footer": {
+    "address": "San Francisco, CA 94102, US\n1234 Some St",
+    "contact": "Phone: 1.800.123.4567\nFax: 1.800.123.4566",
+    "copyright": "© 2026 All Rights Reserved.",
+    "terms": "Terms of use",
+    "and": "and",
+    "privacy": "Privacy Policy"
+  }
+}

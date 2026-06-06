@@ -1,0 +1,86 @@
+.footer {
+  background-color: #2b322c;
+  color: #a0a6a1;
+  padding-top: 60px;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.footerLogo {
+  font-family: serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.footerContactInfo {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.contactCol {
+  text-align: left;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.socialBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.socialBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.copyrightBar {
+  background-color: var(--white);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.8rem;
+}
+
+.legalLink {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.legalLink:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Media Queries --- */
+
+@media (max-width: 768px) {
+  .footerContactInfo {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .contactCol {
+    text-align: center;
+  }
+}

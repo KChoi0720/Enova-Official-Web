@@ -1,0 +1,66 @@
+{
+  "Navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "courses": "课程",
+    "team": "团队",
+    "blog": "博客",
+    "contact": "联系我们",
+    "admin": "管理后台"
+  },
+  "Hero": {
+    "slide1Title": "Education Center 与远程教育",
+    "slide1Subtitle": "我们在提供高质量在线学位和课程的远程教育领域处于世界领先地位。",
+    "slide2Title": "获得个性化的辅导",
+    "slide2Subtitle": "学习是一个协作的过程，我们将在您的每一步提供指导与帮助。",
+    "slide3Title": "实现您的职业目标",
+    "slide3Subtitle": "掌握推进职业发展所需的技能，在现代职场中取得成功。",
+    "cta": "立即开始学习"
+  },
+  "Features": {
+    "feature1": "享受个性化支持，学习计算机科学课程",
+    "feature2": "构建酷炫项目，展示您的技能",
+    "feature3": "获得行业认可的证书"
+  },
+  "Courses": {
+    "title": "即将开课",
+    "priceMonthly": "/ 月",
+    "free": "免费！",
+    "learnMore": "了解更多",
+    "buyNow": "立即购买"
+  },
+  "Partners": {
+    "title": "向最优秀的人学习",
+    "subtitle": "我们的在线课程与技术领导者合作开发，紧跟行业需求。完成在线课程后，您将获得行业领导者认可的认证结业证书。"
+  },
+  "VideoTraining": {
+    "title": "针对微软产品和技术的视频培训",
+    "subtitle": "这里是微软产品相关视频培训的简短描述，为您提供最前沿的技术指导和支持。",
+    "browseCourses": "浏览课程"
+  },
+  "Pricing": {
+    "title": "计划与定价",
+    "trial": "试用版",
+    "trialPrice": "免费！30 天",
+    "monthly": "包月",
+    "monthlyPrice": "$89",
+    "monthlyDesc": "按年付费可比按月付费每年节省 98 美元。",
+    "yearly": "包年",
+    "yearlyPrice": "$129",
+    "yearlyDesc": "按半年付费可比按月付费每年节省 120 美元。",
+    "button": "选择此计划"
+  },
+  "Info": {
+    "calendar": "日历",
+    "popular": "热门课程",
+    "recent": "最新课程"
+  },
+  "Footer": {
+    "address": "美国加利福尼亚州旧金山市\n某某街道 1234 号",
+    "contact": "电话: 1.800.123.4567\n传真: 1.800.123.4566",
+    "copyright": "© 2026 保留所有权利。",
+    "terms": "使用条款",
+    "and": "与",
+    "privacy": "隐私政策"
+  }
+}
