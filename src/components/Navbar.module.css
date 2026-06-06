@@ -15,7 +15,7 @@
   top: unset;
   left: unset;
   width: 100%;
-  padding: 20px 0;
+  padding: 30px 0;  /* Match dark theme so nav items don't shift vertically */
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
@@ -29,7 +29,8 @@
 
 .navbarLight .navContainer {
   border-bottom: none;
-  padding-bottom: 0;
+  /* Match the padding-bottom of dark theme so total height stays consistent */
+  padding-bottom: 20px;
 }
 
 .logo {
