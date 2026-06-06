@@ -8,12 +8,28 @@
   z-index: 50;
 }
 
+/* Light theme — used on Courses page */
+.navbarLight {
+  background-color: var(--white);
+  position: relative;
+  top: unset;
+  left: unset;
+  width: 100%;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
 .navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 4px solid var(--white);
   padding-bottom: 20px;
+}
+
+.navbarLight .navContainer {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .logo {
@@ -25,10 +41,27 @@
   position: relative;
 }
 
+.navbarLight .logo {
+  color: var(--primary);
+}
+
 .navLinks {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative; /* For absolute hoverBackground */
+}
+
+.hoverBackground {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  background-color: var(--primary); /* Theme green */
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth sliding */
+  z-index: 0;
+  pointer-events: none;
 }
 
 .navLink {
@@ -36,13 +69,38 @@
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  transition: background-color 0.3s ease;
   padding: 10px 15px;
-  border-radius: 4px;
+  position: relative;
+  z-index: 1; /* Stay above hoverBackground */
+  transition: opacity 0.3s ease;
 }
 
 .navLink:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Light transparent rectangle */
+  opacity: 0.9;
+}
+
+.navbarLight .navLink {
+  color: var(--primary);
+}
+
+.navbarLight .langBtn {
+  color: var(--primary);
+}
+
+.navbarLight .searchBtn {
+  color: var(--primary);
+}
+
+.navbarLight .searchBtn:hover {
+  background-color: rgba(46, 180, 142, 0.1);
+}
+
+.navbarLight .langBtn:hover {
+  background-color: rgba(46, 180, 142, 0.1);
+}
+
+.navbarLight .hamburgerBtn {
+  color: var(--primary);
 }
 
 .langBtn {

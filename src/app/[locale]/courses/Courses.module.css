@@ -1,0 +1,217 @@
+.main {
+  width: 100%;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+/* ── Static white navbar at the very top of the page ── */
+.navbarSection {
+  background-color: var(--white);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Blue "All Courses" banner ── */
+.headerBanner {
+  position: relative;
+  background-color: #26a6d1;
+  width: 100%;
+  padding: 0 0 55px 0;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 10px;
+}
+
+.headerTitle {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumbItem {
+  background-color: var(--white);
+  color: #777;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.breadcrumbItem:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.breadcrumbSeparator {
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+/* ── Filter Bar ── */
+.filterBar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 40px 0;
+}
+
+.filterBtn {
+  background-color: #2eb48e;
+  color: var(--white);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.filterBtnActive {
+  background-color: #fbb03b;
+}
+
+/* ── Course Grid ── */
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding-bottom: 80px;
+}
+
+/* ── Course Card ── */
+.courseCard {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.cardOverlayBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: var(--white);
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cardBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardCategory {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.cardRating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fbb03b;
+  font-size: 0.85rem;
+}
+
+.ratingStars {
+  display: flex;
+}
+
+.ratingScore {
+  color: #26a6d1;
+  font-weight: 500;
+}
+
+.cardPrice {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #333;
+}
+
+.cardPrice span {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* ── Dynamic Category Colors ── */
+.bgLanguage  { background-color: #26a6d1; }
+.bgMarketing { background-color: #2eb48e; }
+.bgSocial    { background-color: #fbb03b; }
+.bgMedicine  { background-color: #e74c3c; }
+.bgComputers { background-color: #9b59b6; }
+.bgDefault   { background-color: #34495e; }
+
+.textLanguage  { color: #26a6d1; }
+.textMarketing { color: #2eb48e; }
+.textSocial    { color: #fbb03b; }
+.textMedicine  { color: #e74c3c; }
+.textComputers { color: #9b59b6; }
+.textDefault   { color: #34495e; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .headerTitle {
+    font-size: 2.5rem;
+  }
+}
