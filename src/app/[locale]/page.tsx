@@ -9,10 +9,11 @@ import { getCourses } from '@/services/courseService';
 import HeroSlider from '@/components/HeroSlider';
 
 export default async function Home({
-  params: { locale }
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations();
   const courses = await getCourses();
 

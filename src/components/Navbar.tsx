@@ -1,7 +1,9 @@
 import { getTranslations } from 'next-intl/server';
-import {Link} from '@/i18n/routing';
+import { Link } from '@/i18n/routing';
 import styles from './Navbar.module.css';
 import MobileNav from './MobileNav';
+import Image from 'next/image';
+
 
 interface NavbarProps {
   theme?: 'dark' | 'light';
@@ -14,9 +16,7 @@ export default async function Navbar({ theme = 'dark', compact = false }: Navbar
   return (
     <nav className={`${styles.navbar} ${theme === 'light' ? styles.navbarLight : ''} ${compact ? styles.navbarCompact : ''}`}>
       <div className={`container ${styles.navContainer}`}>
-        <Link href="/" className={styles.logo}>
-          Enova.
-        </Link>
+        <Image src="/enova-small-Picsart-BackgroundRemover.png" alt="Enova" width={110} height={28} />
         <MobileNav theme={theme} />
       </div>
     </nav>
