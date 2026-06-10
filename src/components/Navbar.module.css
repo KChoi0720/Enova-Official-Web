@@ -106,19 +106,6 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.searchBtn {
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.searchBtn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
 
 /* --- Mobile Menu Styles --- */
 

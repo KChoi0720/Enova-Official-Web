@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
-import { Search, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 import styles from './Navbar.module.css';
 
@@ -96,13 +96,7 @@ export default function MobileNav({ theme = 'dark' }: MobileNavProps) {
 
         <LanguageSwitcher theme={theme} />
 
-        <button
-          className={styles.searchBtn}
-          style={{ color: linkColor }}
-          aria-label="Search"
-        >
-          <Search size={20} />
-        </button>
+
       </div>
 
       {/* Mobile Hamburger Button */}
@@ -127,9 +121,7 @@ export default function MobileNav({ theme = 'dark' }: MobileNavProps) {
             <Link href="/contact" className={styles.mobileNavLink} onClick={toggleMenu}>{t('contact')}</Link>
             <div className={styles.mobileMenuFooter}>
               <LanguageSwitcher />
-              <button className={styles.searchBtn} aria-label="Search">
-                <Search size={20} />
-              </button>
+
             </div>
           </div>
         </div>
