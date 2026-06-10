@@ -9,7 +9,7 @@
   --text-muted: #777777;
   --white: #ffffff;
   --border-color: #e5e7eb;
-  --font-family-base: "Inter", "Roboto", sans-serif;
+  --font-family-base: "Elms Sans", "Inter", "Roboto", system-ui, sans-serif;
   --header-bg: var(--primary);
   --header-text: var(--white);
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
