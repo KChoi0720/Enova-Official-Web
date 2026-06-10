@@ -11,17 +11,7 @@
   position: relative;
 }
 
-.featuresSection::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 20px 20px 0;
-  border-style: solid;
-  border-color: var(--primary) transparent transparent;
-  z-index: 10;
-}
+
 
 .featuresContainer {
   display: flex;
