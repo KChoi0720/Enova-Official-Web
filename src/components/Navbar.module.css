@@ -76,7 +76,7 @@
 
 .navLink {
   color: var(--white);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   padding: 10px 15px;
@@ -89,29 +89,6 @@
   opacity: 0.9;
 }
 
-.navbarLight .navLink {
-  color: var(--primary);
-}
-
-.navbarLight .langBtn {
-  color: var(--primary);
-}
-
-.navbarLight .searchBtn {
-  color: var(--primary);
-}
-
-.navbarLight .searchBtn:hover {
-  background-color: rgba(46, 180, 142, 0.1);
-}
-
-.navbarLight .langBtn:hover {
-  background-color: rgba(46, 180, 142, 0.1);
-}
-
-.navbarLight .hamburgerBtn {
-  color: var(--primary);
-}
 
 .langBtn {
   color: var(--white);
@@ -119,7 +96,7 @@
   border: none;
   padding: 10px 15px;
   border-radius: 4px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   transition: background-color 0.3s ease;

@@ -52,15 +52,13 @@ export default function MobileNav({ theme = 'dark' }: MobileNavProps) {
   }, [pathname, t]);
 
   /* Inline colour tokens for light theme */
-  const linkColor = isLight ? 'var(--primary)' : 'var(--white)';
+  const linkColor = 'var(--white)';
   /**
    * In light theme the hover background is green, so any link that is
    * currently hovered or active needs WHITE text to stay readable.
    */
   const getLinkColor = (index: number) => {
-    if (!isLight) return 'var(--white)';
-    const isHighlighted = index === hoverIndex || (hoverIndex === -1 && index === activeIndex);
-    return isHighlighted ? 'var(--white)' : 'var(--primary)';
+    return 'var(--white)';
   };
 
   return (

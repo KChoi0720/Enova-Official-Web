@@ -18,7 +18,7 @@ export default function LanguageSwitcher({ theme = 'dark' }: LanguageSwitcherPro
     router.replace(pathname, {locale: nextLocale});
   };
 
-  const color = theme === 'light' ? 'var(--primary)' : 'var(--white)';
+  const color = 'var(--white)';
 
   return (
     <button
