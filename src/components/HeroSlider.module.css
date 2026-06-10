@@ -4,7 +4,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.8s ease;
 }
 
 .heroSection::before {
@@ -17,6 +16,84 @@
   background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h20v20H0z" fill="none"/%3E%3Cpath d="M1 1h1v1H1z" fill="rgba(0,0,0,0.05)"/%3E%3C/svg%3E');
   opacity: 0.5;
   pointer-events: none;
+  z-index: 2;
+}
+
+.bgBase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bgSlideRight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: bgSlideRightAnim 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes bgSlideRightAnim {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.bgBlindsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+}
+
+.bgBlindItem {
+  flex: 1;
+  height: 100%;
+  transform-origin: left;
+  animation: bgBlindAnim 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes bgBlindAnim {
+  0% { opacity: 1; transform: scaleX(0); }
+  100% { opacity: 1; transform: scaleX(1); }
+}
+
+.bgFade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: bgFadeAnim 2s ease forwards;
+}
+
+@keyframes bgFadeAnim {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.bgCircleReveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: bgCircleRevealAnim 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes bgCircleRevealAnim {
+  0% { clip-path: circle(0% at 50% 50%); }
+  100% { clip-path: circle(150% at 50% 50%); }
 }
 
 .heroContainer {
