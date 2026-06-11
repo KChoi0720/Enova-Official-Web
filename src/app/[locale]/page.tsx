@@ -78,21 +78,6 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className={styles.partnersSection}>
-        <div className={`container ${styles.partnersContainer}`}>
-          <h2 className={styles.partnersTitle}>{t('Partners.title')}</h2>
-          <p className={styles.partnersSubtitle}>{t('Partners.subtitle')}</p>
-          <div className={styles.partnersLogos}>
-            <div className={styles.partnerLogo}>Logo 1</div>
-            <div className={styles.partnerLogo}>Logo 2</div>
-            <div className={styles.partnerLogo}>Logo 3</div>
-            <div className={styles.partnerLogo}>Logo 4</div>
-            <div className={styles.partnerLogo}>Logo 5</div>
-          </div>
-        </div>
-      </section>
-
       {/* Video Training Section */}
       <section className={styles.videoSection}>
         <div className={`container ${styles.videoContainer}`}>
