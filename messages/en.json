@@ -23,9 +23,12 @@
     "feature3": "Earn certificates recognized by Industry"
   },
   "Courses": {
+    "eyebrow": "Featured Courses",
     "title": "Courses Starting Soon",
+    "subtitle": "Explore our most popular programs — designed around real-world skills and led by industry experts.",
     "priceMonthly": "/ monthly",
     "free": "Free!",
+    "viewAll": "View All Courses",
     "learnMore": "LEARN MORE",
     "buyNow": "BUY NOW"
   },

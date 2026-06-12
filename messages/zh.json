@@ -23,9 +23,12 @@
     "feature3": "获得行业认可的证书"
   },
   "Courses": {
+    "eyebrow": "精选课程",
     "title": "即将开课",
+    "subtitle": "探索我们最受欢迎的课程 —— 专为实际技能设计，由行业专家主导。",
     "priceMonthly": "/ 月",
     "free": "免费！",
+    "viewAll": "查看全部课程",
     "learnMore": "了解更多",
     "buyNow": "立即购买"
   },

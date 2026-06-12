@@ -7,6 +7,7 @@ import { Monitor, Rocket, Globe, Timer, Star, Eye, ChevronLeft, ChevronRight } f
 import { getCourses } from '@/services/courseService';
 
 import HeroSlider from '@/components/HeroSlider';
+import FeaturedCourseCard from '@/components/FeaturedCourseCard';
 
 export default async function Home({
   params,
@@ -57,23 +58,19 @@ export default async function Home({
       {/* Courses Section */}
       <section className={styles.coursesSection}>
         <div className="container">
+          <p className={styles.sectionEyebrow}>{t('Courses.eyebrow')}</p>
           <h2 className={styles.sectionTitle}>{t('Courses.title')}</h2>
+          <p className={styles.sectionSubtitle}>{t('Courses.subtitle')}</p>
           <div className={styles.coursesGrid}>
-            {courses.map((course: any) => (
-              <div key={course.id} className={styles.courseCard}>
-                <div className={styles.courseImagePlaceholder}></div>
-                <div className={styles.courseContent}>
-                  <h3 className={styles.courseTitle}>{course.title}</h3>
-                  <div className={styles.courseFooter}>
-                    <span className={styles.courseCategory}>{course.category}</span>
-                    <span className={styles.coursePrice}>
-                      {course.price === 0 ? t('Courses.free') : `$${course.price} `}
-                      {course.price !== 0 && <small>{t('Courses.priceMonthly')}</small>}
-                    </span>
-                  </div>
-                </div>
-              </div>
+            {courses.slice(0, 3).map((course: any, i: number) => (
+              <FeaturedCourseCard key={course.id} course={course} delay={i * 100} />
             ))}
+          </div>
+          <div className={styles.viewAllWrapper}>
+            <a href="/courses" className={styles.viewAllBtn}>
+              {t('Courses.viewAll')}
+              <span className={styles.viewAllArrow}>→</span>
+            </a>
           </div>
         </div>
       </section>

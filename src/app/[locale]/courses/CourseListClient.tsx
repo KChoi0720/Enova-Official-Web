@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import { Star } from 'lucide-react';
+import FeaturedCourseCard from '@/components/FeaturedCourseCard';
 import styles from './Courses.module.css';
 
 interface Course {
@@ -24,26 +23,9 @@ export default function CourseListClient({ initialCourses }: Props) {
 
   const categories = ['All', 'Language', 'Marketing', 'Social', 'Medicine', 'Computers'];
 
-  const filteredCourses = activeCategory === 'All' 
-    ? initialCourses 
+  const filteredCourses = activeCategory === 'All'
+    ? initialCourses
     : initialCourses.filter(c => c.category === activeCategory);
-
-  const getColorClass = (category: string, type: 'bg' | 'text') => {
-    switch (category) {
-      case 'Language': return type === 'bg' ? styles.bgLanguage : styles.textLanguage;
-      case 'Marketing': return type === 'bg' ? styles.bgMarketing : styles.textMarketing;
-      case 'Social': return type === 'bg' ? styles.bgSocial : styles.textSocial;
-      case 'Medicine': return type === 'bg' ? styles.bgMedicine : styles.textMedicine;
-      case 'Computers': return type === 'bg' ? styles.bgComputers : styles.textComputers;
-      default: return type === 'bg' ? styles.bgDefault : styles.textDefault;
-    }
-  };
-
-  // Generate a mock rating score based on course ID for UI demonstration
-  const getMockRating = (id: number) => {
-    const scores = [60.5, 76.3, 53.5, 82.1, 91.0, 45.2];
-    return scores[id % scores.length];
-  };
 
   return (
     <div className="container">
@@ -60,56 +42,10 @@ export default function CourseListClient({ initialCourses }: Props) {
         ))}
       </div>
 
-      {/* Course Grid */}
+      {/* Course Grid — uses the same premium card as homepage */}
       <div className={styles.courseGrid}>
-        {filteredCourses.map(course => (
-          <div key={course.id} className={styles.courseCard}>
-            
-            {/* Image Overlay */}
-            <div className={styles.cardImageWrapper}>
-              <Image 
-                src={course.image || '/course_placeholder.png'} 
-                alt={course.title} 
-                fill 
-                sizes="(max-width: 768px) 100vw, 33vw"
-                style={{ objectFit: 'cover' }} 
-              />
-              <div className={`${styles.cardOverlayBar} ${getColorClass(course.category, 'bg')}`}>
-                <h3 className={styles.cardTitle}>{course.title}</h3>
-              </div>
-            </div>
-
-            {/* Details Section */}
-            <div className={styles.cardBody}>
-              <div className={`${styles.cardCategory} ${getColorClass(course.category, 'text')}`}>
-                {course.category}
-              </div>
-              
-              <div className={styles.cardFooter}>
-                <div className={styles.cardRating}>
-                  <div className={styles.ratingStars}>
-                    <Star size={14} fill="currentColor" />
-                    <Star size={14} fill="currentColor" />
-                    <Star size={14} fill="currentColor" />
-                    <Star size={14} fill="currentColor" />
-                    <Star size={14} strokeWidth={1} />
-                  </div>
-                  <span className={styles.ratingScore}>{getMockRating(course.id)}</span>
-                </div>
-                
-                <div className={styles.cardPrice}>
-                  {course.price === 0 ? (
-                    <span>{t('free')}</span>
-                  ) : (
-                    <>
-                      ${course.price} <span>{t('monthly')}</span>
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-
-          </div>
+        {filteredCourses.map((course, i) => (
+          <FeaturedCourseCard key={course.id} course={course} delay={i * 80} />
         ))}
       </div>
     </div>

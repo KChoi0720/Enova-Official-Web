@@ -1,6 +1,6 @@
 .main {
   width: 100%;
-  background-color: #f7f9fc;
+  background: linear-gradient(160deg, #06110d 0%, #071620 50%, #0a0e1a 100%);
   min-height: 100vh;
 }
 
@@ -33,6 +33,7 @@
   font-size: 3.5rem;
   font-weight: 300;
   margin: 0;
+  margin-left: 20px;
   letter-spacing: 0.02em;
 }
 
@@ -99,110 +100,9 @@
 .courseGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px 60px;
+  gap: 24px;
   padding-bottom: 80px;
 }
-
-/* ── Course Card ── */
-.courseCard {
-  background-color: var(--white);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.courseCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-.cardImageWrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
-}
-
-.cardOverlayBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px 14px;
-  color: var(--white);
-}
-
-.cardTitle {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.3;
-}
-
-.cardBody {
-  padding: 10px 12px 12px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.cardCategory {
-  font-size: 0.8rem;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.cardFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2px;
-}
-
-.cardRating {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #fbb03b;
-  font-size: 0.75rem;
-}
-
-.ratingStars {
-  display: flex;
-}
-
-.ratingScore {
-  color: #26a6d1;
-  font-weight: 500;
-}
-
-.cardPrice {
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: #333;
-}
-
-.cardPrice span {
-  font-size: 0.75rem;
-  color: #999;
-}
-
-/* ── Dynamic Category Colors ── */
-.bgLanguage  { background-color: #26a6d1; }
-.bgMarketing { background-color: #2eb48e; }
-.bgSocial    { background-color: #fbb03b; }
-.bgMedicine  { background-color: #e74c3c; }
-.bgComputers { background-color: #9b59b6; }
-.bgDefault   { background-color: #34495e; }
-
-.textLanguage  { color: #26a6d1; }
-.textMarketing { color: #2eb48e; }
-.textSocial    { color: #fbb03b; }
-.textMedicine  { color: #e74c3c; }
-.textComputers { color: #9b59b6; }
-.textDefault   { color: #34495e; }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
